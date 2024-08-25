@@ -19,4 +19,14 @@ Examples:
 - delete airport by id: http://localhost:4567/airports/9999
 - get all airports: http://localhost:4567/airports
 
+You can run 
+
+    mvn clean install
+
+to build the code, create a jar file and then a Docker image using buildah. An image is build and can be run like this:
+
+    podman run --name "airportrest-test" --rm -it -p 5000:4567 airportrest:latest
+
+The image can of course also be run using Docker.
+
 last update: uwe.geercken@web.de - 2024-08-25
